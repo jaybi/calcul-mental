@@ -19,7 +19,6 @@ true = 0
 false = 0 
 
 while(1):
-    
     start = time.time()
     a = random.randint(9,99)
     b = random.randint(2,9)

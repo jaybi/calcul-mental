@@ -19,8 +19,6 @@ true = 0
 false = 0 
 
 while(1):
-
-    
     start = time.time()
     a = random.randint(1,100)
     b = random.randint(2,100)
