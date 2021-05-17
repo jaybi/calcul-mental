@@ -23,7 +23,7 @@ while(1):
     start = time.time()
     a = random.randint(0,100)
     b = random.randint(0,100)
-    if (a-b>0):
+    if (a-b>0): # Uniquement des soustraction dans les entiers naturels
         answer = int(input(repr(a) + " - " + repr(b) + " = ?"))
         end = time.time()
         durations.append(f"{(end-start):.2f}")
