@@ -19,10 +19,11 @@ true = 0
 false = 0 
 
 while(1):
+
     
     start = time.time()
-    a = random.randint(0,100)
-    b = random.randint(0,100)
+    a = random.randint(1,100)
+    b = random.randint(2,100)
     if (a-b>0): # Uniquement des soustraction dans les entiers naturels
         answer = int(input(repr(a) + " - " + repr(b) + " = ?"))
         end = time.time()
@@ -36,5 +37,11 @@ while(1):
         sum = 0.0
         for n in durations:
             sum = sum + float(n)
-        print("Durée = " + f"{(end-start):.2f} Moy : " + f"{sum / len(durations):.2f}" + " | " + str(true) + " sur " + str(false+true) + "\n")
+        print("Durée = " + f"{(end-start):.2f}s | ", end = '')
+        print("Moy : " + f"{sum / len(durations):.2f} s | " , end = '')
+        print(str(true) + " sur " + str(false+true) + " | " , end = '')
+        print(bcolors.WARNING + f"{true*100/(true+false):.0f}%" + bcolors.ENDC if (true*100/(true+false) < 90) else bcolors.OKGREEN + f"{true*100/(true+false):.0f}%" + bcolors.ENDC)
+
+
+
 

@@ -35,5 +35,8 @@ while(1):
     sum = 0.0
     for n in durations:
         sum = sum + float(n)
-    print("Durée = " + f"{(end-start):.2f} Moy : " + f"{sum / len(durations):.2f}" + " | " + str(true) + " sur " + str(false+true) + "\n")
+    print("Durée = " + f"{(end-start):.2f}s | ", end = '')
+    print("Moy : " + f"{sum / len(durations):.2f} s | " , end = '')
+    print(str(true) + " sur " + str(false+true) + " | " , end = '')
+    print(bcolors.WARNING + f"{true*100/(true+false):.0f}%" + bcolors.ENDC if (true*100/(true+false) < 90) else bcolors.OKGREEN + f"{true*100/(true+false):.0f}%" + bcolors.ENDC)
 
